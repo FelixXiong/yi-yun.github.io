@@ -127,7 +127,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2018/07/22/5b542f5c58d76.jpg">
 <meta property="og:image" content="https://i.loli.net/2018/07/22/5b5469d3cce66.png">
-<meta property="og:updated_time" content="2018-07-30T07:38:26.098Z">
+<meta property="og:updated_time" content="2018-07-30T12:07:26.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="爬坑指南">
 <meta name="twitter:description" content="基于树莓派的微信机器人  在大一计算机导论课的时候，老师演示了用 APP 控制 LED 灯的系统，当时觉得很极客。脑海中就幻想，在九点下班的路上，在微信对话框内输入打开空调，回到家后就能享受迎面而来的凉风……而这一切都是你自己搭建的，那是多么美妙的事情！ 相关背景很早之前，学长送了我一个树莓派作为社团留任礼物。一直想愉快地玩耍，却迟迟不得空。 2018 年寒假终于感受到了嵌入式的魅力。有了">
@@ -362,7 +362,7 @@
                 
               
 
-              <time title="创建时间：2018-07-30 15:24:53 / 修改时间：15:38:26" itemprop="dateCreated datePublished" datetime="2018-07-30T15:24:53+08:00">2018-07-30</time>
+              <time title="创建时间：2018-07-30 15:24:53 / 修改时间：20:07:26" itemprop="dateCreated datePublished" datetime="2018-07-30T15:24:53+08:00">2018-07-30</time>
             
 
             
@@ -475,7 +475,7 @@
 <li><strong>点歌播放</strong><br>  首先要有音乐播放器<code>sudo apt-get install mplayer</code>，这里用到的是 mplayer，后面直接跟链接就能播放<br>  有了播放器后，接下来是音乐链接了。这里是最苦恼我的地方。几个月前在网上找了很多教程。Linux 相关的最出名的就是网易云音乐了。所以先找的是网易云音乐，什么 Node.js 版，CLI 下的等等，有的功能太全需要登陆，有的不符合要求······总之，均不满意。<br>  后来无意中浏览小豆机器人功能列表时发现了这货竟然提供点歌播放，迅速输入连接获取的是一串文字，用正则表达式匹配后，竟然成功点歌播放了。只是因为采用的是 HTTP 协议，歌名不能有空格。<del>大作业演示的时候不输空格就好了，总比没有好</del><br>  有了链接后，还需多线程停止播放，不然你得听完整首歌才能开灯，太 Low 了！<br>  代码如下:  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">has_music</span><span class="params">(text)</span>:</span></span><br><span class="line">thre=threading.Thread();</span><br><span class="line"><span class="keyword">if</span> text[<span class="number">0</span>].__eq__(<span class="string">"点"</span>) <span class="keyword">and</span> text[<span class="number">1</span>].__eq__(<span class="string">"歌"</span>):</span><br><span class="line">    reply = Tuling.get_response(text)</span><br><span class="line">    pattern=re.compile(<span class="string">r'http://zhangmenshiting.*'</span>)</span><br><span class="line">    url=re.findall(pattern,reply)</span><br><span class="line">    url=url[<span class="number">0</span>][<span class="number">0</span>:<span class="number">-1</span>]</span><br><span class="line">    thre=threading.Thread(target=play,args=[url])</span><br><span class="line">    thre.start()</span><br><span class="line"><span class="keyword">elif</span> text.__contains__(<span class="string">"停止"</span>):</span><br><span class="line">    os.system(<span class="string">'killall -9 mplayer'</span> )</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">return</span> deng(text)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="项目总结"><a href="#项目总结" class="headerlink" title="项目总结"></a>项目总结</h3><p>可能因为第一次做项目的关系，略显得有点稚嫩。不仅体现在代码上，还在工作流上有问题。后来静下心来，用思维导图重新梳理了思路，打了草稿，一切都迎刃而解。<br>欢迎各位看官提出各种见解和建议！</p>
+<h3 id="项目总结"><a href="#项目总结" class="headerlink" title="项目总结"></a>项目总结</h3><p><a href="https://github.com/yi-yun/raspi-chatrobot" target="_blank" rel="noopener">项目地址</a><br>可能因为第一次做项目的关系，略显得有点稚嫩。不仅体现在代码上，还在工作流上有问题。后来静下心来，用思维导图重新梳理了思路，打了草稿，一切都迎刃而解。<br>欢迎各位看官提出各种见解和建议！</p>
 
       
     </div>
@@ -614,8 +614,6 @@
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
                     
-                    
-                      
                     
                       
                     
