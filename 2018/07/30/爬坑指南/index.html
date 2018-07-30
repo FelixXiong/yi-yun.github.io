@@ -127,7 +127,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2018/07/22/5b542f5c58d76.jpg">
 <meta property="og:image" content="https://i.loli.net/2018/07/22/5b5469d3cce66.png">
-<meta property="og:updated_time" content="2018-07-30T12:07:26.255Z">
+<meta property="og:updated_time" content="2018-07-30T13:53:26.138Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="爬坑指南">
 <meta name="twitter:description" content="基于树莓派的微信机器人  在大一计算机导论课的时候，老师演示了用 APP 控制 LED 灯的系统，当时觉得很极客。脑海中就幻想，在九点下班的路上，在微信对话框内输入打开空调，回到家后就能享受迎面而来的凉风……而这一切都是你自己搭建的，那是多么美妙的事情！ 相关背景很早之前，学长送了我一个树莓派作为社团留任礼物。一直想愉快地玩耍，却迟迟不得空。 2018 年寒假终于感受到了嵌入式的魅力。有了">
@@ -362,7 +362,7 @@
                 
               
 
-              <time title="创建时间：2018-07-30 15:24:53 / 修改时间：20:07:26" itemprop="dateCreated datePublished" datetime="2018-07-30T15:24:53+08:00">2018-07-30</time>
+              <time title="创建时间：2018-07-30 15:24:53 / 修改时间：21:53:26" itemprop="dateCreated datePublished" datetime="2018-07-30T15:24:53+08:00">2018-07-30</time>
             
 
             
@@ -465,7 +465,7 @@
 <li><p><strong>模块采用</strong><br>查阅资料后，了解到微信机器人 python 模块流行的有两种：itchat 和 wxpy。初步比较后采用 itchat，原因是wxpy是在itchat上改的。从某种意义上来说，itchat 更原始一点。<br><a href="http://itchat.readthedocs.io/zh/latest/" target="_blank" rel="noopener">itchat 官方文档</a><br>例：</p>
   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@itchat.msg_register(TEXT)  #处理对话框内的消息先根据消息类型进行注册</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">text_reply</span><span class="params">(msg)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> Chat.has_music(msg[<span class="string">'Text'</span>]</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong>自动回复</strong><br>回复对话需要相应的 API 支持，最常见的是图灵机器人（<del>个人觉得是名字取得好才常见</del>）。本项目用到的还有小豆机器人的 API 。<br>国外还有被谷歌收购的 api.ai ，基于机器学习，有时间的话可以研究一下。<br>例：小豆机器人注册账号得到相应的 Key 后可在浏览器打开<a href="http://api.douqq.com/?key=Rzd5bW49Mj0vZ09hbmh0MEJ1VENReGdWd2hZQUFBPT0&amp;msg=什么是物联网返回结果" target="_blank" rel="noopener">链接</a>（这里用的是我的 key）<br>同理图灵机器人也会有相应的 Key，以<code>res = requests.post(apiUrl, data=data).json()</code>的代码方式（需要以 json 格式）请求数据，然后得到结果<code>title = res.get(&#39;text&#39;)</code></p>
+<li><p><strong>自动回复</strong><br>回复对话需要相应的 API 支持，最常见的是图灵机器人（<del>个人觉得是名字取得好才常见</del>）。本项目用到的还有小豆机器人的 API 。<br>国外还有被谷歌收购的 api.ai ，基于机器学习，有时间的话可以研究一下。<br>例：小豆机器人注册账号得到相应的 Key 后可在浏览器打开<a href="http://api.douqq.com/?key=Rzd5bW49Mj0vZ09hbmh0MEJ1VENReGdWd2hZQUFBPT0&amp;msg=什么是物联网" target="_blank" rel="noopener">链接</a>（这里用的是我的 key）<br>同理图灵机器人也会有相应的 Key，以<code>res = requests.post(apiUrl, data=data).json()</code>的代码方式（需要以 json 格式）请求数据，然后得到结果<code>title = res.get(&#39;text&#39;)</code></p>
 </li>
 <li><p><strong>控制 LED</strong><br>对于了解过树莓派 GPIO 的人来说很简单。</p>
   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> RPi.GPIO <span class="keyword">as</span> GPIO  <span class="comment">#引入模块</span></span><br><span class="line">pin=<span class="number">17</span>  <span class="comment">#设置引脚</span></span><br><span class="line">GPIO.setmode(GPIO.BCM)  <span class="comment">#设置BCM模式</span></span><br><span class="line">GPIO.setup(pin,GPIO.OUT)  <span class="comment">#初始化</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">on</span><span class="params">()</span>:</span></span><br><span class="line">    GPIO.output(pin,<span class="keyword">True</span>)   <span class="comment">#高电平开</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">off</span><span class="params">()</span>:</span></span><br><span class="line">    GPIO.output(pin,<span class="keyword">False</span>)   <span class="comment">#低电平关</span></span><br></pre></td></tr></table></figure>
@@ -537,6 +537,12 @@
 
 
     <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b5f0b8719e0aa32" async = "async" ></script>
+</div>
+
       
     </div>
   </div>
