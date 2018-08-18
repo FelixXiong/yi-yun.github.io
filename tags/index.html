@@ -31,7 +31,7 @@
     
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-atom.min.css?v=1.0.2" rel="stylesheet">
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -364,10 +364,18 @@
                     
                   
                 
-                目前共计 4 个标签
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                目前共计 6 个标签
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/关于我/" style="font-size: 12px; color: #ccc">关于我</a> <a href="/tags/导航/" style="font-size: 12px; color: #ccc">导航</a> <a href="/tags/树莓派/" style="font-size: 12px; color: #ccc">树莓派</a> <a href="/tags/聊天机器人/" style="font-size: 12px; color: #ccc">聊天机器人</a>
+              <a href="/tags/Android-Studio-安装配置/" style="font-size: 12px; color: #ccc">Android Studio 安装配置</a> <a href="/tags/关于我/" style="font-size: 12px; color: #ccc">关于我</a> <a href="/tags/导航/" style="font-size: 12px; color: #ccc">导航</a> <a href="/tags/树莓派/" style="font-size: 12px; color: #ccc">树莓派</a> <a href="/tags/笔记/" style="font-size: 12px; color: #ccc">笔记</a> <a href="/tags/聊天机器人/" style="font-size: 12px; color: #ccc">聊天机器人</a>
             </div>
           </div>
         
@@ -428,7 +436,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -445,7 +453,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -466,7 +478,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -519,6 +535,10 @@
                     <a href="https://marshmallowlands.github.io" title="H2O" target="_blank">H2O</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/kjsd/" title="如是艰难繁琐" target="_blank">如是艰难繁琐</a>
+                  </li>
+                
               </ul>
             </div>
           
@@ -557,7 +577,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">3k</span>
+    <span title="站点总字数">4k</span>
   
 
   
@@ -777,6 +797,72 @@
   
 
   
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
 
 </body>
 </html>
