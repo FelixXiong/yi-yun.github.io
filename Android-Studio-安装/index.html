@@ -117,21 +117,23 @@
 
 
 
-  <meta name="description" content="基于树莓派的微信机器人  在大一计算机导论课的时候，老师演示了用 APP 控制 LED 灯的系统，当时觉得很极客。脑海中就幻想，在九点下班的路上，在微信对话框内输入打开空调，回到家后就能享受迎面而来的凉风……而这一切都是你自己搭建的，那是多么美妙的事情！ 相关背景很早之前，学长送了我一个树莓派作为社团留任礼物。一直想愉快地玩耍，却迟迟不得空。 2018 年寒假终于感受到了嵌入式的魅力。有了">
-<meta name="keywords" content="树莓派,聊天机器人">
+  <meta name="description" content="前言之前重新安装了双系统，装完怎么能没有 Android Studio 这个神器呢？但博主是个强迫症的人，一般软件不喜欢安装在 C 盘，最主要的原因是 C 盘空间初始分的太小，加上 Windows 的尿性，天天更新之类少空间就很头疼">
+<meta name="keywords" content="Android Studio 安装配置,笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="爬坑指南">
-<meta property="og:url" content="http://yi-yun.github.io/2018/07/30/爬坑指南/index.html">
+<meta property="og:title" content="Android Studio 安装（减少 C 盘空间）">
+<meta property="og:url" content="http://yi-yun.github.io/Android-Studio-安装/index.html">
 <meta property="og:site_name" content="念念不忘，必有回响">
-<meta property="og:description" content="基于树莓派的微信机器人  在大一计算机导论课的时候，老师演示了用 APP 控制 LED 灯的系统，当时觉得很极客。脑海中就幻想，在九点下班的路上，在微信对话框内输入打开空调，回到家后就能享受迎面而来的凉风……而这一切都是你自己搭建的，那是多么美妙的事情！ 相关背景很早之前，学长送了我一个树莓派作为社团留任礼物。一直想愉快地玩耍，却迟迟不得空。 2018 年寒假终于感受到了嵌入式的魅力。有了">
+<meta property="og:description" content="前言之前重新安装了双系统，装完怎么能没有 Android Studio 这个神器呢？但博主是个强迫症的人，一般软件不喜欢安装在 C 盘，最主要的原因是 C 盘空间初始分的太小，加上 Windows 的尿性，天天更新之类少空间就很头疼">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2018/07/22/5b542f5c58d76.jpg">
-<meta property="og:image" content="https://i.loli.net/2018/07/22/5b5469d3cce66.png">
-<meta property="og:updated_time" content="2018-07-30T13:53:26.138Z">
+<meta property="og:image" content="https://i.loli.net/2018/08/15/5b73a619714be.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/08/18/5b77837e050c8.png">
+<meta property="og:image" content="https://i.loli.net/2018/08/18/5b7784e690ba4.png">
+<meta property="og:image" content="https://i.loli.net/2018/08/18/5b77866f6a904.png">
+<meta property="og:updated_time" content="2018-08-18T03:23:27.523Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="爬坑指南">
-<meta name="twitter:description" content="基于树莓派的微信机器人  在大一计算机导论课的时候，老师演示了用 APP 控制 LED 灯的系统，当时觉得很极客。脑海中就幻想，在九点下班的路上，在微信对话框内输入打开空调，回到家后就能享受迎面而来的凉风……而这一切都是你自己搭建的，那是多么美妙的事情！ 相关背景很早之前，学长送了我一个树莓派作为社团留任礼物。一直想愉快地玩耍，却迟迟不得空。 2018 年寒假终于感受到了嵌入式的魅力。有了">
-<meta name="twitter:image" content="https://i.loli.net/2018/07/22/5b542f5c58d76.jpg">
+<meta name="twitter:title" content="Android Studio 安装（减少 C 盘空间）">
+<meta name="twitter:description" content="前言之前重新安装了双系统，装完怎么能没有 Android Studio 这个神器呢？但博主是个强迫症的人，一般软件不喜欢安装在 C 盘，最主要的原因是 C 盘空间初始分的太小，加上 Windows 的尿性，天天更新之类少空间就很头疼">
+<meta name="twitter:image" content="https://i.loli.net/2018/08/15/5b73a619714be.jpg">
 
 
 
@@ -140,7 +142,7 @@
 
 
 
-  <link rel="canonical" href="http://yi-yun.github.io/2018/07/30/爬坑指南/"/>
+  <link rel="canonical" href="http://yi-yun.github.io/Android-Studio-安装/"/>
 
 
 
@@ -150,7 +152,7 @@
   };
 </script>
 
-  <title>爬坑指南 | 念念不忘，必有回响</title>
+  <title>Android Studio 安装（减少 C 盘空间） | 念念不忘，必有回响</title>
   
 
 
@@ -213,6 +215,10 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">欢迎回来</h1>
+      
     
   </div>
 
@@ -320,11 +326,11 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yi-yun.github.io/2018/07/30/爬坑指南/">
+    <link itemprop="mainEntityOfPage" href="http://yi-yun.github.io/Android-Studio-安装/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yi-Yun">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="诚毅勤朴">
       <meta itemprop="image" content="https://i.loli.net/2018/07/23/5b55e5cea192a.png">
     </span>
 
@@ -337,10 +343,10 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">爬坑指南
+          <h2 class="post-title" itemprop="name headline">Android Studio 安装（减少 C 盘空间）
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -362,7 +368,7 @@
                 
               
 
-              <time title="创建时间：2018-07-30 15:24:53 / 修改时间：21:53:26" itemprop="dateCreated datePublished" datetime="2018-07-30T15:24:53+08:00">2018-07-30</time>
+              <time title="创建时间：2018-08-18 10:47:28 / 修改时间：11:23:27" itemprop="dateCreated datePublished" datetime="2018-08-18T10:47:28+08:00">2018-08-18</time>
             
 
             
@@ -384,7 +390,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/树莓派/" itemprop="url" rel="index"><span itemprop="name">树莓派</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/win-配置/" itemprop="url" rel="index"><span itemprop="name">win 配置</span></a></span>
 
                 
                 
@@ -420,7 +426,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2k</span>
+                <span title="本文字数">801</span>
               
 
               
@@ -434,7 +440,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -454,28 +460,30 @@
       
 
       
-        <p align="center"><br>  <img src="https://i.loli.net/2018/07/22/5b542f5c58d76.jpg" alt="IMG_5686.jpg" title="IMG_5686.jpg" width="250"><br></p>
+        <p align="center"><br>  <img src="https://i.loli.net/2018/08/15/5b73a619714be.jpg" alt="IMG_5686.jpg" title="IMG_5686.jpg" class="full-image" width="650/"><br></p>
 
-<font size="6" face="黑体"><center>基于树莓派的微信机器人</center></font>
 
-<p>在大一计算机导论课的时候，老师演示了用 APP 控制 LED 灯的系统，当时觉得很极客。脑海中就幻想，在九点下班的路上，在微信对话框内输入<code>打开空调</code>，回到家后就能享受迎面而来的凉风……而这一切都是你自己搭建的，那是多么美妙的事情！</p>
-<h3 id="相关背景"><a href="#相关背景" class="headerlink" title="相关背景"></a>相关背景</h3><p>很早之前，学长送了我一个树莓派作为社团留任礼物。一直想愉快地玩耍，却迟迟不得空。 2018 年寒假终于感受到了嵌入式的魅力。有了寒假折腾的基础（折腾过程可能后续会写到博客），到了嵌入式系统开发的课程，<del>为了大作业</del>（其实还是自己想折腾）做了一个基于树莓派的微信机器人。<br><a id="more"></a></p>
-<h3 id="具体实施"><a href="#具体实施" class="headerlink" title="具体实施"></a>具体实施</h3><p>跟着脑海中的思路先画了思维导图<br><img src="https://i.loli.net/2018/07/22/5b5469d3cce66.png" alt=""></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前重新安装了双系统，装完怎么能没有 Android Studio 这个神器呢？<br>但博主是个强迫症的人，一般软件不喜欢安装在 C 盘，最主要的原因是 C 盘空间初始分的太小，加上 Windows 的尿性，天天更新之类少空间就很头疼<br><a id="more"></a></p>
+<h2 id="配置-Java-环境"><a href="#配置-Java-环境" class="headerlink" title="配置 Java 环境"></a>配置 Java 环境</h2><p>这里我装的是 Java 8 的环境，配置环境对于老手来说手到擒来。<del>我不会告诉你们我配的时候去网上看了遍教程……</del></p>
+<h2 id="下载-Android-Studio"><a href="#下载-Android-Studio" class="headerlink" title="下载 Android Studio"></a>下载 Android Studio</h2><p>很多人推荐去<a href="https://developer.android.com/studio/" target="_blank" rel="noopener">官网</a>下，这是最新的（可能有老版的，但我没找到），但 3.1 以上的版本我记得没有 Android Monitor，而且可能访问速度不够快，最好有个梯子，个人不是很推荐</p>
+<p>我是去<a href="http://www.androiddevtools.cn/" target="_blank" rel="noopener">这里</a>下的，点开页面惊不惊喜？竟然是中文的！你也可以直接在此页面点<a href="https://dl.google.com/dl/android/studio/install/3.0.1.0/android-studio-ide-171.4443003-windows.exe?utm_source=androiddevtools&amp;utm_medium=website" target="_blank" rel="noopener">链接</a>下载 Android Studio 3.0.1.exe 安装程序</p>
+<h2 id="安装-Android-Studio"><a href="#安装-Android-Studio" class="headerlink" title="安装 Android Studio"></a>安装 Android Studio</h2><p>更改安装路径，一路 next 即可</p>
+<h3 id="配置-Android-Studio（重要）"><a href="#配置-Android-Studio（重要）" class="headerlink" title="配置 Android Studio（重要）"></a>配置 Android Studio（重要）</h3><h3 id="选择-Custom"><a href="#选择-Custom" class="headerlink" title="选择 Custom"></a>选择 Custom</h3><p>选择 Standard 模式可能更改不了路径</p>
+<h3 id="取消勾选-Android-Virtual-Device"><a href="#取消勾选-Android-Virtual-Device" class="headerlink" title="取消勾选 Android Virtual Device"></a>取消勾选 Android Virtual Device</h3><p>顾名思义安卓虚拟机，调试用的个人不喜欢安装这玩意，原因有很多：</p>
 <ul>
-<li><p><strong>模块采用</strong><br>查阅资料后，了解到微信机器人 python 模块流行的有两种：itchat 和 wxpy。初步比较后采用 itchat，原因是wxpy是在itchat上改的。从某种意义上来说，itchat 更原始一点。<br><a href="http://itchat.readthedocs.io/zh/latest/" target="_blank" rel="noopener">itchat 官方文档</a><br>例：</p>
-  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@itchat.msg_register(TEXT)  #处理对话框内的消息先根据消息类型进行注册</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">text_reply</span><span class="params">(msg)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> Chat.has_music(msg[<span class="string">'Text'</span>]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>自动回复</strong><br>回复对话需要相应的 API 支持，最常见的是图灵机器人（<del>个人觉得是名字取得好才常见</del>）。本项目用到的还有小豆机器人的 API 。<br>国外还有被谷歌收购的 api.ai ，基于机器学习，有时间的话可以研究一下。<br>例：小豆机器人注册账号得到相应的 Key 后可在浏览器打开<a href="http://api.douqq.com/?key=Rzd5bW49Mj0vZ09hbmh0MEJ1VENReGdWd2hZQUFBPT0&amp;msg=什么是物联网" target="_blank" rel="noopener">链接</a>（这里用的是我的 key）<br>同理图灵机器人也会有相应的 Key，以<code>res = requests.post(apiUrl, data=data).json()</code>的代码方式（需要以 json 格式）请求数据，然后得到结果<code>title = res.get(&#39;text&#39;)</code></p>
-</li>
-<li><p><strong>控制 LED</strong><br>对于了解过树莓派 GPIO 的人来说很简单。</p>
-  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> RPi.GPIO <span class="keyword">as</span> GPIO  <span class="comment">#引入模块</span></span><br><span class="line">pin=<span class="number">17</span>  <span class="comment">#设置引脚</span></span><br><span class="line">GPIO.setmode(GPIO.BCM)  <span class="comment">#设置BCM模式</span></span><br><span class="line">GPIO.setup(pin,GPIO.OUT)  <span class="comment">#初始化</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">on</span><span class="params">()</span>:</span></span><br><span class="line">    GPIO.output(pin,<span class="keyword">True</span>)   <span class="comment">#高电平开</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">off</span><span class="params">()</span>:</span></span><br><span class="line">    GPIO.output(pin,<span class="keyword">False</span>)   <span class="comment">#低电平关</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>天气爬取</strong><br>室外天气爬取的是墨迹天气，参考的是<a href="https://zhuanlan.zhihu.com/p/24983204" target="_blank" rel="noopener">树莓派语音闹钟</a><br>这里用到的<a href="http://tts.baidu.com/text2audio?idx=1&amp;tex=%E5%9F%BA%E4%BA%8E%E6%A0%91%E8%8E%93%E6%B4%BE%E7%9A%84%E5%BE%AE%E4%BF%A1%E6%9C%BA%E5%99%A8%E4%BA%BA&amp;cuid=baidu_speech_demo&amp;cod=2&amp;lan=zh&amp;ctp=1&amp;pdt=1&amp;spd=5&amp;per=4&amp;vol=5&amp;pit=5" target="_blank" rel="noopener">百度 API </a>很有意思，关于语音类的以后可能还会用到<br>因为还有 DHT11 模块获取室内温湿度，所以在原来基础的代码上又加了一些代码</p>
-</li>
-<li><strong>点歌播放</strong><br>  首先要有音乐播放器<code>sudo apt-get install mplayer</code>，这里用到的是 mplayer，后面直接跟链接就能播放<br>  有了播放器后，接下来是音乐链接了。这里是最苦恼我的地方。几个月前在网上找了很多教程。Linux 相关的最出名的就是网易云音乐了。所以先找的是网易云音乐，什么 Node.js 版，CLI 下的等等，有的功能太全需要登陆，有的不符合要求······总之，均不满意。<br>  后来无意中浏览小豆机器人功能列表时发现了这货竟然提供点歌播放，迅速输入连接获取的是一串文字，用正则表达式匹配后，竟然成功点歌播放了。只是因为采用的是 HTTP 协议，歌名不能有空格。<del>大作业演示的时候不输空格就好了，总比没有好</del><br>  有了链接后，还需多线程停止播放，不然你得听完整首歌才能开灯，太 Low 了！<br>  代码如下:  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">has_music</span><span class="params">(text)</span>:</span></span><br><span class="line">thre=threading.Thread();</span><br><span class="line"><span class="keyword">if</span> text[<span class="number">0</span>].__eq__(<span class="string">"点"</span>) <span class="keyword">and</span> text[<span class="number">1</span>].__eq__(<span class="string">"歌"</span>):</span><br><span class="line">    reply = Tuling.get_response(text)</span><br><span class="line">    pattern=re.compile(<span class="string">r'http://zhangmenshiting.*'</span>)</span><br><span class="line">    url=re.findall(pattern,reply)</span><br><span class="line">    url=url[<span class="number">0</span>][<span class="number">0</span>:<span class="number">-1</span>]</span><br><span class="line">    thre=threading.Thread(target=play,args=[url])</span><br><span class="line">    thre.start()</span><br><span class="line"><span class="keyword">elif</span> text.__contains__(<span class="string">"停止"</span>):</span><br><span class="line">    os.system(<span class="string">'killall -9 mplayer'</span> )</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">return</span> deng(text)</span><br></pre></td></tr></table></figure>
-</li>
+<li>占用空间只能装在 C 盘的</li>
+<li>我有淘汰的 Android 手机</li>
+<li>没有域名映射，调试的时候有点问题</li>
+<li>实在不行，可以用夜神模拟器代替</li>
 </ul>
-<h3 id="项目总结"><a href="#项目总结" class="headerlink" title="项目总结"></a>项目总结</h3><p><a href="https://github.com/yi-yun/raspi-chatrobot" target="_blank" rel="noopener">项目地址</a><br>可能因为第一次做项目的关系，略显得有点稚嫩。不仅体现在代码上，还在工作流上有问题。后来静下心来，用思维导图重新梳理了思路，打了草稿，一切都迎刃而解。<br>欢迎各位看官提出各种见解和建议！</p>
+<p>总之，我就算是死也不会装的！<del>真香</del></p>
+<h3 id="移动文件"><a href="#移动文件" class="headerlink" title="移动文件"></a>移动文件</h3><p>主要移动的是用户目录下的以下文件<img src="https://i.loli.net/2018/08/18/5b77837e050c8.png" alt="文件目录"></p>
+<h4 id="更改-gradle-目录"><a href="#更改-gradle-目录" class="headerlink" title="更改 gradle 目录"></a>更改 gradle 目录</h4><p>打开 AS 的 setting，进行相关设置</p>
+<p><img src="https://i.loli.net/2018/08/18/5b7784e690ba4.png" alt=""></p>
+<h4 id="更改-Android-Studio-配置相关目录"><a href="#更改-Android-Studio-配置相关目录" class="headerlink" title="更改 Android Studio 配置相关目录"></a>更改 Android Studio 配置相关目录</h4><p>进入 Android Studio 安装位置，比如我安装在了<code>D:\Android Studio</code>，找到<code>D:\Android Studio\bin\idea.properties</code></p>
+<p>更改配置文件，将两个路径更改为自己喜欢的路径，如图</p>
+<p><img src="https://i.loli.net/2018/08/18/5b77866f6a904.png" alt=""></p>
+<p>更改完保存重启即可</p>
 
       
     </div>
@@ -496,9 +504,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/树莓派/" rel="tag"><i class="fa fa-compass"></i> 树莓派</a>
+            <a href="/tags/Android-Studio-安装配置/" rel="tag"><i class="fa fa-compass"></i> Android Studio 安装配置</a>
           
-            <a href="/tags/聊天机器人/" rel="tag"><i class="fa fa-compass"></i> 聊天机器人</a>
+            <a href="/tags/笔记/" rel="tag"><i class="fa fa-compass"></i> 笔记</a>
           
         </div>
       
@@ -511,8 +519,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/24/博客小记/" rel="next" title="陌上花开">
-                <i class="fa fa-chevron-left"></i> 陌上花开
+              <a href="/爬坑指南/" rel="next" title="爬坑指南">
+                <i class="fa fa-chevron-left"></i> 爬坑指南
               </a>
             
           </div>
@@ -520,10 +528,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/18/Android-Studio-安装/" rel="prev" title="Android Studio 安装（减少 C 盘空间）">
-                Android Studio 安装（减少 C 盘空间） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -602,7 +606,7 @@
                 alt="Yi-Yun" />
             
               <p class="site-author-name" itemprop="name">Yi-Yun</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">诚毅勤朴</p>
           </div>
 
           
@@ -679,12 +683,12 @@
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/yi-yun" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/yi-yun" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:yi--yun@outlook.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  <a href="mailto:yi--yun@outlook.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   
                 </span>
               
@@ -737,7 +741,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#相关背景"><span class="nav-number">1.</span> <span class="nav-text">相关背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体实施"><span class="nav-number">2.</span> <span class="nav-text">具体实施</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目总结"><span class="nav-number">3.</span> <span class="nav-text">项目总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-Java-环境"><span class="nav-number">2.</span> <span class="nav-text">配置 Java 环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载-Android-Studio"><span class="nav-number">3.</span> <span class="nav-text">下载 Android Studio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Android-Studio"><span class="nav-number">4.</span> <span class="nav-text">安装 Android Studio</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-Android-Studio（重要）"><span class="nav-number">4.1.</span> <span class="nav-text">配置 Android Studio（重要）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择-Custom"><span class="nav-number">4.2.</span> <span class="nav-text">选择 Custom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#取消勾选-Android-Virtual-Device"><span class="nav-number">4.3.</span> <span class="nav-text">取消勾选 Android Virtual Device</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动文件"><span class="nav-number">4.4.</span> <span class="nav-text">移动文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#更改-gradle-目录"><span class="nav-number">4.4.1.</span> <span class="nav-text">更改 gradle 目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更改-Android-Studio-配置相关目录"><span class="nav-number">4.4.2.</span> <span class="nav-text">更改 Android Studio 配置相关目录</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -783,10 +787,12 @@
 </div>
 
 
+  
+
 
 
 <!--
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -794,7 +800,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.3.0</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Pisces</a> v6.3.0</div>
 
 
 
