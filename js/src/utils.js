@@ -288,7 +288,7 @@ $(document).ready(function() {
 
   function updateSidebarHeight(height) {
     height = height || 'auto';
-    $('.site-overview, .post-toc').css('max-height', height+100);
+    $('.site-overview, .post-toc').css('max-height', height+80);
   }
 
   function initSidebarDimension() {
