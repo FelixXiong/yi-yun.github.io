@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+  <url>
+    <loc>https://yi-yun.github.io/Android-Studio-%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2018-09-12T14:22:09.411Z</lastmod>
+    <data>
+        <display>
+        <title>Android Studio 安装（减少 C 盘空间）</title>
+        <pubTime>2018-08-18T02:47:28.000Z</pubTime>
+        
+        <tag>Android Studio 安装配置</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="win 配置" url="https://yi-yun.github.io/categories/win-%E9%85%8D%E7%BD%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://yi-yun.github.io/%E7%88%AC%E5%9D%91%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2018-09-12T09:31:01.784Z</lastmod>
+    <data>
+        <display>
+        <title>爬坑指南</title>
+        <pubTime>2018-07-30T07:24:53.000Z</pubTime>
+        
+        <tag>树莓派</tag>
+         
+        <tag>聊天机器人</tag>
+         
+         
+           
+             
+              <breadCrumb title="树莓派" url="https://yi-yun.github.io/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://yi-yun.github.io/%E5%8D%9A%E5%AE%A2%E5%B0%8F%E8%AE%B0/</loc>
+    <lastmod>2018-07-24T02:46:20.677Z</lastmod>
+    <data>
+        <display>
+        <title>陌上花开</title>
+        <pubTime>2018-07-24T02:34:54.000Z</pubTime>
+        
+        <tag>导航</tag>
+         
+        <tag>关于我</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="https://yi-yun.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+</urlset>
