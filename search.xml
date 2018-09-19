@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Android Studio 安装]]></title>
+    <url>%2FAndroid-Studio-%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[前言之前重新安装了双系统，装完怎么能没有 Android Studio 这个神器呢？但博主是个强迫症的人，一般软件不喜欢安装在 C 盘，最主要的原因是 C 盘空间初始分的太小，加上 Windows 的尿性，天天更新之类少空间就很头疼，所以应该尽可能减少占用 C 盘的空间。 配置 Java 环境这里我装的是 Java 8 的环境，配置环境对于老手来说手到擒来。我不会告诉你们我配的时候去网上看了遍教程…… 下载 Android Studio很多人推荐去官网下，这是最新的（可能有老版的，但我没找到），但 3.1 以上的版本我记得没有 Android Monitor，而且可能访问速度不够快，最好有个梯子，个人不是很推荐 我是去这里下的，点开页面惊不惊喜？竟然是中文的！你也可以直接在此页面点链接下载 Android Studio 3.0.1.exe 安装程序 安装 Android Studio更改安装路径，一路 next 即可 配置 Android Studio（重要）选择 Custom选择 Standard 模式可能更改不了路径 取消勾选 Android Virtual Device顾名思义安卓虚拟机，调试用的个人不喜欢安装这玩意，原因有很多： 占用空间只能装在 C 盘的 我有淘汰的 Android 手机 没有域名映射，调试的时候有点问题 实在不行，可以用夜神模拟器代替 总之，我就算是死也不会装的！真香 移动文件主要移动的是用户目录下的以下文件 更改 gradle 目录打开 AS 的 setting，进行相关设置 更改 Android Studio 配置相关目录进入 Android Studio 安装位置，比如我安装在了D:\Android Studio，找到D:\Android Studio\bin\idea.properties 更改配置文件，将两个路径更改为自己喜欢的路径，如图 更改完保存重启即可]]></content>
+      <categories>
+        <category>win 配置</category>
+      </categories>
+      <tags>
+        <tag>Android Studio 安装配置</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[爬坑指南]]></title>
+    <url>%2F%E7%88%AC%E5%9D%91%E6%8C%87%E5%8D%97%2F</url>
+    <content type="text"><![CDATA[在大一计算机导论课的时候，老师演示了用 APP 控制 LED 灯的系统，当时觉得很极客。脑海中就幻想，在九点下班的路上，在微信对话框内输入打开空调，回到家后就能享受迎面而来的凉风……而这一切都是你自己搭建的，那是多么美妙的事情！ 相关背景很早之前，学长送了我一个树莓派作为社团留任礼物。一直想愉快地玩耍，却迟迟不得空。 2018 年寒假终于感受到了嵌入式的魅力。有了寒假折腾的基础（折腾过程可能后续会写到博客），到了嵌入式系统开发的课程，为了大作业（其实还是自己想折腾）做了一个基于树莓派的微信机器人。 具体实施跟着脑海中的思路先画了思维导图 模块采用查阅资料后，了解到微信机器人 python 模块流行的有两种：itchat 和 wxpy。初步比较后采用 itchat，原因是wxpy是在itchat上改的。从某种意义上来说，itchat 更原始一点。itchat 官方文档例： 123@itchat.msg_register(TEXT) #处理对话框内的消息先根据消息类型进行注册def text_reply(msg): return Chat.has_music(msg['Text'] 自动回复回复对话需要相应的 API 支持，最常见的是图灵机器人（个人觉得是名字取得好才常见）。本项目用到的还有小豆机器人的 API 。国外还有被谷歌收购的 api.ai ，基于机器学习，有时间的话可以研究一下。例：小豆机器人注册账号得到相应的 Key 后可在浏览器打开链接（这里用的是我的 key）同理图灵机器人也会有相应的 Key，以res = requests.post(apiUrl, data=data).json()的代码方式（需要以 json 格式）请求数据，然后得到结果title = res.get(&#39;text&#39;) 控制 LED对于了解过树莓派 GPIO 的人来说很简单。 12345678import RPi.GPIO as GPIO #引入模块pin=17 #设置引脚GPIO.setmode(GPIO.BCM) #设置BCM模式GPIO.setup(pin,GPIO.OUT) #初始化def on(): GPIO.output(pin,True) #高电平开def off(): GPIO.output(pin,False) #低电平关 天气爬取室外天气爬取的是墨迹天气，参考的是树莓派语音闹钟这里用到的百度 API 很有意思，关于语音类的以后可能还会用到因为还有 DHT11 模块获取室内温湿度，所以在原来基础的代码上又加了一些代码 点歌播放 首先要有音乐播放器sudo apt-get install mplayer，这里用到的是 mplayer，后面直接跟链接就能播放 有了播放器后，接下来是音乐链接了。这里是最苦恼我的地方。几个月前在网上找了很多教程。Linux 相关的最出名的就是网易云音乐了。所以先找的是网易云音乐，什么 Node.js 版，CLI 下的等等，有的功能太全需要登陆，有的不符合要求······总之，均不满意。 后来无意中浏览小豆机器人功能列表时发现了这货竟然提供点歌播放，迅速输入连接获取的是一串文字，用正则表达式匹配后，竟然成功点歌播放了。只是因为采用的是 HTTP 协议，歌名不能有空格。大作业演示的时候不输空格就好了，总比没有好 有了链接后，还需多线程停止播放，不然你得听完整首歌才能开灯，太 Low 了！ 代码如下: 12345678910111213def has_music(text):thre=threading.Thread();if text[0].__eq__("点") and text[1].__eq__("歌"): reply = Tuling.get_response(text) pattern=re.compile(r'http://zhangmenshiting.*') url=re.findall(pattern,reply) url=url[0][0:-1] thre=threading.Thread(target=play,args=[url]) thre.start()elif text.__contains__("停止"): os.system('killall -9 mplayer' )else: return deng(text) 项目总结项目地址可能因为第一次做项目的关系，略显得有点稚嫩。不仅体现在代码上，还在工作流上有问题。后来静下心来，用思维导图重新梳理了思路，打了草稿，一切都迎刃而解。欢迎各位看官提出各种见解和建议！]]></content>
+      <categories>
+        <category>树莓派</category>
+      </categories>
+      <tags>
+        <tag>树莓派</tag>
+        <tag>聊天机器人</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[陌上花开]]></title>
+    <url>%2F%E5%8D%9A%E5%AE%A2%E5%B0%8F%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[陌上花开，可缓缓归矣。 第一次知道这句话是在初二，是一位好友的 QQ 昵称。转眼六载有余，当时可曾想这句话会成为我人生中第一个博客的开篇句。这句话的意思大致是夫君想念妻子，希望妻子早点从娘家回来，但显然我并没有那么煽情。博客引用这句话意在自勉，希望不再自甘堕落，找回自我。 最近浏览大佬博客，看到了“人为什么活着”。这个问题每个人的每个阶段有不同的理解。现在的我为了学习，学好了为了什么？为了能找工作？找到工作为了什么？为了人活着。 也许那个时候又会问自己人活着为了什么？我会答，为了去做自己最喜欢做的事情，也是我 GitHub 的 bio “Do Your Favorites ”，真正做到的又有几个呢？没有人会告诉你也不能告诉你死后会怎么样，无神论，有神论？谁知道呢。Enjoy now enough! 博客目的 输出提升一月前加入了某大佬的知识星球，真的感触颇多，每天的分享，仿佛大家都在努力奋斗，而只有自己堕落在寝室中，无所事事……终于下定决心开个博客，写点东西，总比在寝室里睡觉看视频强。 查询笔记不久前，重装了 win10 系统，又重新配了各种环境，教程网上一通搜索……更折腾的是，有大神推荐我 Arch Linux，因为涉及到双系统，装了七八遍，也是官方 wiki 以及各种教程乱找，用多方版本成功体验。最后终于受不了，决定有一个适合自己的笔记博客。当然期待与各位看官的共同进步！ 选择平台 你为什么选这里？为什么呢？因为穷…自己的博客需要云主机、域名，哦，对了还有那个恼人的备案。其实主要是云主机，学生机每个月十块钱（其实不贵），但加上 VPS 每个月三十，个人认为不是很值。虽然“免费的是最贵的”，但显然 GitHub Pages 托管的博客要排除在外。 既然你有 VPS ，为什么不搭 VPS 上呢还是因为穷…开个玩笑，VPS 主机在旧金山，Ping 延迟过高，加上不想耦合太紧（就像代码一样）。如果我关 VPS 的话，要考虑博客等，过于麻烦。]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>关于我</tag>
+      </tags>
+  </entry>
+</search>
