@@ -1894,7 +1894,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0bff9e;
+  background: #fff0d2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3048,7 +3048,7 @@ body {
 .feed-link {
   margin-top: 15px;
   margin-left: 10px;
-  padding: 0px 68px;
+  padding: 0px 66px;
 }
 .feed-link a {
   border: 1px solid #fc6423 !important;
