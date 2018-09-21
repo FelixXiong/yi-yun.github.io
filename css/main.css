@@ -1894,7 +1894,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d59cd6;
+  background: #0bff9e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3047,11 +3047,19 @@ body {
 }
 .feed-link {
   margin-top: 15px;
-  margin-left: 7px;
+  margin-left: 10px;
+  padding: 0px 68px;
 }
 .feed-link a {
-  border: 1px solid #f73809 !important;
-  border-radius: 16px;
+  border: 1px solid #fc6423 !important;
+  border-radius: 15px;
+}
+.feed-link a:hover {
+  background-color: #f79709;
+  color: #fff;
+}
+.feed-link a:hover i {
+  color: #fff;
 }
 .links-of-author {
   text-align: center;
