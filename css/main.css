@@ -1894,7 +1894,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff0d2;
+  background: #09395b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3055,7 +3055,7 @@ body {
   border-radius: 15px;
 }
 .feed-link a:hover {
-  background-color: #f79709;
+  background-color: #fc6423;
   color: #fff;
 }
 .feed-link a:hover i {
