@@ -2006,7 +2006,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff4669;
+  background: #ffa640;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3262,4 +3262,21 @@ body {
 }
 .icon-zhihu:before {
   content: "\e618";
+}
+.polaroid {
+  width: 30%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-bottom: 25px;
+  display: inline-block;
+}
+.containery {
+  text-align: center;
+  padding: 10px 20px;
+}
+.containery p {
+  margin: 15px 0 10px 0;
+}
+.card-grid {
+  text-align: center;
 }
