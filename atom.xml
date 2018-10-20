@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yi-yun.github.io/"/>
-  <updated>2018-10-15T10:07:05.303Z</updated>
+  <updated>2018-10-20T13:48:26.571Z</updated>
   <id>https://yi-yun.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git 使用</title>
+    <link href="https://yi-yun.github.io/Git%E4%BD%BF%E7%94%A8/"/>
+    <id>https://yi-yun.github.io/Git使用/</id>
+    <published>2018-10-20T13:44:00.000Z</published>
+    <updated>2018-10-20T13:48:26.571Z</updated>
+    
+    <content type="html"><![CDATA[<p align="center"><br>    <img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20181020203310.png" class="full-class"><br></p><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>主要是简单的 Git 命令介绍，初衷是看完这篇文章能直接上手在 GitHub 上 <code>New pull request</code> 进行项目开发</p><a id="more"></a><h2 id="多平台初始化"><a href="#多平台初始化" class="headerlink" title="多平台初始化"></a>多平台初始化</h2><p><strong>极其重要，不然 merge 时代码会很乱</strong></p><ol><li><p>编辑器改成（UX）模式</p><ul><li>换行符采用 LF</li><li>UTF-8 编码</li></ul></li><li><p>Git 命令行配置</p><ul><li><code>git config --global core.safecrlf true</code></li><li><code>git config --global core.autocrlf false</code>  </li></ul></li></ol><p>原因见<a href="https://github.com/cssmagic/blog/issues/22" target="_blank" rel="noopener">链接</a></p><h2 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h2><p>本文采用的是 pull request 的方式，因为这样可以进行 code review</p><ol><li><p>Fork 源仓库<br>点击 <code>Fork</code> 按钮将项目复制到自己的仓库</p></li><li><p>拉取本地仓库<br>用 <code>git clone 项目地址</code> 到自己电脑上，嫌慢的朋友见<a href="#设置代理">这里</a></p></li><li><p>开发<br>你可以在 master 分支上开发，也可以再新建一个 dev 分支（看项目大小以及简易程度）<br>开发完以后，<code>git add . &amp;&amp; git commit -m &#39;注释&#39; &amp;&amp; git push</code></p></li><li><p>创建合并请求<br>打开网页进入 Fork 的项目，然后点击 <code>New pull request</code>，最后点击 <code>Create pull request</code> 按钮，添加一段注释，源仓库的管理员就能收到你的请求<br><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20181020212913.png" alt=""></p></li><li><p>同步<br>如果过了一礼拜作者或其他人员对仓库的代码进行了修改，源代码变了，你本地的代码还是前几天的。<br>这时候你需要使用 Git 命令 <code>git fetch 源仓库地址:分支名</code> （分支名自己取，不建议直接拉取到主分支），然后 <code>git merge 分支名</code> 即可同步代码（有冲突就处理冲突）</p></li></ol><h2 id="一些小技巧"><a href="#一些小技巧" class="headerlink" title="一些小技巧"></a>一些小技巧</h2><h3 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h3><p>GayHub 被墙的厉害，这步以及下步没有代理的忽略</p><p><code>git config --global http.proxy &#39;socks5://127.0.0.1:1080&#39;</code><br><code>git config --global https.proxy &#39;socks5://127.0.0.1:1080&#39;</code></p><p>因为访问 GitHub 走的代理，用 https 连接的主机提交会有点问题，可以使用 ssh 链接提交。更改主机连接方法点<a href="#更改远程仓库指向-remote-url">这里</a></p><h3 id="取消代理"><a href="#取消代理" class="headerlink" title="取消代理"></a>取消代理</h3><p><code>git config --global --unset http.proxy</code></p><p><code>git config --global --unset https.proxy</code></p><h3 id="更改远程仓库指向-remote-url"><a href="#更改远程仓库指向-remote-url" class="headerlink" title="更改远程仓库指向 remote url"></a>更改远程仓库指向 remote url</h3><ul><li><code>git remote set-url origin yoururl</code></li><li><code>git config -e</code>  熟悉 vim 的朋友可以使用，最后记得保存（个人喜欢这种方式）</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p align=&quot;center&quot;&gt;&lt;br&gt;    &lt;img src=&quot;https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20181020203310.png&quot; class=&quot;full-class&quot;&gt;&lt;br&gt;&lt;/p&gt;
+
+
+&lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;p&gt;主要是简单的 Git 命令介绍，初衷是看完这篇文章能直接上手在 GitHub 上 &lt;code&gt;New pull request&lt;/code&gt; 进行项目开发&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="代码协作" scheme="https://yi-yun.github.io/categories/%E4%BB%A3%E7%A0%81%E5%8D%8F%E4%BD%9C/"/>
+    
+    
+      <category term="博客" scheme="https://yi-yun.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="Git" scheme="https://yi-yun.github.io/tags/Git/"/>
+    
+      <category term="奇淫怪技" scheme="https://yi-yun.github.io/tags/%E5%A5%87%E6%B7%AB%E6%80%AA%E6%8A%80/"/>
+    
+      <category term="配置笔记" scheme="https://yi-yun.github.io/tags/%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="软件" scheme="https://yi-yun.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>可能是最佳的免费图床</title>
@@ -71,11 +104,11 @@
     
       <category term="奇淫怪技" scheme="https://yi-yun.github.io/tags/%E5%A5%87%E6%B7%AB%E6%80%AA%E6%8A%80/"/>
     
-      <category term="Windows" scheme="https://yi-yun.github.io/tags/Windows/"/>
-    
       <category term="配置笔记" scheme="https://yi-yun.github.io/tags/%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0/"/>
     
       <category term="软件" scheme="https://yi-yun.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="Windows" scheme="https://yi-yun.github.io/tags/Windows/"/>
     
   </entry>
   

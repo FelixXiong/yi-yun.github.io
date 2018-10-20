@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>https://yi-yun.github.io/Git%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-10-20T13:48:26.571Z</lastmod>
+    <data>
+        <display>
+        <title>Git 使用</title>
+        <pubTime>2018-10-20T13:44:00.000Z</pubTime>
+        
+        <tag>博客</tag>
+         
+        <tag>Git</tag>
+         
+        <tag>奇淫怪技</tag>
+         
+        <tag>配置笔记</tag>
+         
+        <tag>软件</tag>
+         
+         
+           
+             
+              <breadCrumb title="代码协作" url="https://yi-yun.github.io/categories/%E4%BB%A3%E7%A0%81%E5%8D%8F%E4%BD%9C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://yi-yun.github.io/win10%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2018-10-19T06:22:44.396Z</lastmod>
     <data>
@@ -13,11 +41,11 @@
         
         <tag>奇淫怪技</tag>
          
-        <tag>Windows</tag>
-         
         <tag>配置笔记</tag>
          
         <tag>软件</tag>
+         
+        <tag>Windows</tag>
          
          
            
