@@ -977,28 +977,6 @@ function createtime() {
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv" title="总访客量">
-      <i class="fa fa-user"></i>
-      您是访问本站的第
-      <span  class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      位朋友
-    </span>
-  
-  &nbsp;
-  
-    <span class="site-pv" title="总访问量">
-      <i class="fa fa-eye"></i>
-      本站总共访问
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      次
-    </span>
-  
-</div>
-
 
 
 
@@ -1132,6 +1110,31 @@ function createtime() {
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'wyqdxjyVw0BWLhMGSMr3lQpQ-gzGzoHsz',
+        appKey: 'jOCr0YIyGf3sBvg1WghMtIXi',
+        placeholder: 'Just go go',
+        avatar:'wavatar',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
 
 
 
